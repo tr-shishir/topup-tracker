@@ -14,11 +14,8 @@ use App\Http\Controllers\TopUpUserController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/topup-users', [TopUpUserController::class, 'index'])->name('topup-users.index');
+Route::get('/', [TopUpUserController::class, 'index'])->name('topup-users.index');
 Route::get('/topup-users-by-amount', [TopUpUserController::class, 'indexByAmount'])->name('topup-users.indexByAmount');
-Route::get('/topup-users/search', [TopUpUserController::class, 'search'])->name('topup-users.search');
-Route::post('/topup-users/calculate', [TopUpUserController::class, 'calculate'])->name('topup-users.calculate');
+Route::get('/search', [TopUpUserController::class, 'search'])->name('topup-users.search');
+Route::post('/calculate', [TopUpUserController::class, 'calculate'])->name('topup-users.calculate');

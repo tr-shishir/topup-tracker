@@ -26,9 +26,10 @@ These instructions will get you a copy of the project up and running on your loc
     - Another way to do this is to import a file called `topup.sql` from the root folder.
 9. Start the development server: `php artisan serve`
 
-Now you are ready to Go.
 
 ### Requirement for server/local side
+
+- The process that will run every day first hour automatically and get top 10 topup Users, you need a Scheduler.
 
 1.`For Scheduler:` 
 
@@ -40,6 +41,8 @@ Now you are ready to Go.
     
         - This command will run the scheduler every minute `* * * * * php /path/to/artisan schedule:run`
         
+- The process that initiate manually and get top 10 topup Users (btn:Re-Calculate Top-Up), to achive that you need a Queue driver setup. Because of more then 200,000 you have to search it will take a long time for user. But queue will do it in background so that user must not see the page is looooooaaaading. 
+
 2.`For Job Dispatched:` 
 
     2.1 If you are in Local server in your local device, then you must need to run a command in your terminal `php artisan queue:work`.
@@ -51,6 +54,8 @@ Now you are ready to Go.
         - This command will run the scheduler every minute `* * * * * php /path/to/artisan queue:work`
         
         - Alternative you can use Supervisor to run your workers.
+
+Now you are ready to Go.
 
 ### Thanks
 
