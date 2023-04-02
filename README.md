@@ -24,6 +24,7 @@ These instructions will get you a copy of the project up and running on your loc
 7. Migrate the database: `php artisan migrate --seed`
     - You can run a command that creates 500 fake user accounts and 200,000 pretend top-up transactions that happened either yesterday or today and belongs to the 500 user. 
     - Another way to do this is to import a file called `topup.sql` from the root folder.
+8. Once the seeding or importing process is completed, you may execute the command `php artisan calculate:topup-users` to perform the top-up users calculation.
 9. Start the development server: `php artisan serve`
 
 
