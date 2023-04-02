@@ -34,7 +34,7 @@ Now you are ready to Go.
 
     1.1 If you are in Local server in your local device, then you must need to run a command in your terminal `php artisan schedule:work`.
     
-        - With this you can run your scheduler. Also you you can run the commands needs to run manually in your terminal. Commands you can find from `app\Console\Kernel.php`
+        - With this you can run your scheduler until it find any schedule to run. Also you you can run the commands needs to run manually in your terminal. Commands you can find from `app\Console\Kernel.php`
         
     1.2 If you are in live server, then you must need to set a cron Job with `* * * * *` cron expression. 
     
